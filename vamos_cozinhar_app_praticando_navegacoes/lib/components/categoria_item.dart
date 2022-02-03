@@ -9,6 +9,18 @@ class ItemCategoria extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        gradient: LinearGradient(
+          colors: [
+            categoria.cor.withOpacity(0.5),
+            categoria.cor,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
+      padding: const EdgeInsets.all(15),
       child: Text(categoria.titulo),
     );
   }

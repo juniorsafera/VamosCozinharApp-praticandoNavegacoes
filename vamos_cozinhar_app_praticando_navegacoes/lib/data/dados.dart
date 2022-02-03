@@ -8,11 +8,7 @@ const DADOS_CATEGORIAS = const [
     titulo: "Italiano",
     cor: Colors.yellow,
   ),
-  ModeloCategoria(
-    id: 'c1',
-    titulo: "Italiano",
-    cor: Colors.black,
-  ),
+  ModeloCategoria(id: 'c1', titulo: "Italiano", cor: Colors.pink),
   ModeloCategoria(
     id: 'c2',
     titulo: "Café da manhã",
@@ -31,21 +27,20 @@ const DADOS_CATEGORIAS = const [
   ModeloCategoria(
     id: 'c5',
     titulo: "Japonesa",
-    cor: Colors.cyan,
+    cor: Colors.green,
   ),
   ModeloCategoria(
     id: 'c6',
     titulo: "Bebidas",
-    cor: Colors.cyan,
+    cor: Colors.lightBlue,
   ),
   ModeloCategoria(
     id: 'c7',
     titulo: "Doces",
-    cor: Colors.cyan,
+    cor: Colors.amber,
   ),
   ModeloCategoria(
     id: 'c8',
     titulo: "Tira gostos",
-    cor: Colors.cyan,
   ),
 ];
