@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vamos_cozinhar_app_praticando_navegacoes/screens/categorias.dart';
 
 class TelaPrincipal extends StatelessWidget {
   const TelaPrincipal({Key? key}) : super(key: key);
@@ -9,9 +10,7 @@ class TelaPrincipal extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Vamos Cozinhar?"),
       ),
-      body: const Center(
-        child: Text("Navegar é preciso!"),
-      ),
+      body: const ScreenCategorias(),
     );
   }
 }
