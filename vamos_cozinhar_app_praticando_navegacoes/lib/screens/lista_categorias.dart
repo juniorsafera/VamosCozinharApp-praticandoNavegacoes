@@ -16,7 +16,7 @@ class ListaCategorias extends StatelessWidget {
         mainAxisSpacing: 20,
       ),
       children:
-          DADOS_CATEGORIAS.map((e) => ItemCategoria(categoria: e)).toList(),
+          DADOS_CATEGORIAS.map((e) => ItemCategoria(mCategoria: e)).toList(),
     );
   }
 }

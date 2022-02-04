@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:vamos_cozinhar_app_praticando_navegacoes/models/categorias.dart';
 
 class CategoriaAlimentos extends StatelessWidget {
-  final ModeloCategoria mCategoria;
-  const CategoriaAlimentos({
-    Key? key,
-    required this.mCategoria,
-  }) : super(key: key);
+  const CategoriaAlimentos({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // argumento da rota
+    final mCategoria =
+        ModalRoute.of(context)!.settings.arguments as ModeloCategoria;
+        //
     return Scaffold(
       appBar: AppBar(
         backgroundColor: mCategoria.cor,
