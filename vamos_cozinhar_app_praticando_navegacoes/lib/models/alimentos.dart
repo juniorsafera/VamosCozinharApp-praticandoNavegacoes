@@ -27,6 +27,32 @@ class ModeloAlimentos {
       required this.eVegetariano,
       required this.complexidade,
       required this.custo});
+
+  String get complexidadeText {
+    switch (complexidade) {
+      case Complexidade.simples:
+        return 'Simples';
+      case Complexidade.facil:
+        return 'Fácil';
+      case Complexidade.dificil:
+        return 'Difícil';
+      default:
+        return 'Desconhecida';
+    }
+  }
+
+  String get custotext {
+    switch (custo) {
+      case Custo.barato:
+        return 'Barato';
+      case Custo.justo:
+        return 'Justo';
+      case Custo.caro:
+        return 'Caro';
+      default:
+        return 'Desconhecido';
+    }
+  }
 }
 
 enum Complexidade {

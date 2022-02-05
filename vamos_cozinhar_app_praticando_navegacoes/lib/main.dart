@@ -5,6 +5,7 @@ import 'utils/rotas.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     routes: {
       // ignore: prefer_const_constructors
       Rotas.home: (context) => TelaPrincipal(),
