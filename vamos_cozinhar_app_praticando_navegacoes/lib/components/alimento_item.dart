@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vamos_cozinhar_app_praticando_navegacoes/models/alimentos.dart';
+import 'package:vamos_cozinhar_app_praticando_navegacoes/utils/rotas.dart';
 
 class AlimentoItem extends StatelessWidget {
   final ModeloAlimentos mAlimento;
@@ -8,12 +9,15 @@ class AlimentoItem extends StatelessWidget {
     required this.mAlimento,
   }) : super(key: key);
 
-  void _selecionarAlimento() {}
+  void _selecionarAlimento(BuildContext context) {
+    Navigator.of(context)
+        .pushNamed(Rotas.detalheAlimentos, arguments: mAlimento);
+  }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onDoubleTap: _selecionarAlimento,
+      onTap: () => _selecionarAlimento(context),
       child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
