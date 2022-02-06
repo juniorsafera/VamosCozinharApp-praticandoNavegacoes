@@ -18,7 +18,10 @@ class DetalheAlimento extends StatelessWidget {
             Container(
               height: 300,
               width: double.infinity,
-              child: Image.network(alimento.imagemUrl),
+              child: Image.network(
+                alimento.imagemUrl,
+                fit: BoxFit.cover,
+              ),
             ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 10),
