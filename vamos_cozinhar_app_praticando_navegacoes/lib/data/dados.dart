@@ -80,7 +80,7 @@ const List<ModeloAlimentos> DADOS_ALIMENTOS = [
   ModeloAlimentos(
     id: 'a2',
     categorias: ['c1', 'c2'],
-    titulo: "Sopa de legumes",
+    titulo: "Salada crua",
     imagemUrl:
         'https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
     igredientes: [
@@ -88,6 +88,9 @@ const List<ModeloAlimentos> DADOS_ALIMENTOS = [
       '1 colher de sopa de Azeite',
       '250g Quejo muçarela',
       '1pc Macarrão',
+      '1cp Água quente',
+      '100ml Vinagre',
+      '2 colheres chá sal',
     ],
     passos: [
       "Passo 1: ...",
