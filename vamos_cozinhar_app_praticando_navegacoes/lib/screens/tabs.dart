@@ -32,8 +32,8 @@ class _TabsState extends State<Tabs> {
         ),
         body: const TabBarView(
           children: [
-            // ListaCategorias(),
-            // Favoritos(),
+              ListaCategorias(),
+              Favoritos(),
           ],
         ),
       ),
