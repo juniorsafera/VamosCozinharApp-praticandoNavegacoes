@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vamos_cozinhar_app_praticando_navegacoes/screens/categoria_alimentos.dart';
 import 'package:vamos_cozinhar_app_praticando_navegacoes/screens/favorito.dart';
 
 import 'lista_categorias.dart';
@@ -32,8 +31,8 @@ class _TabsState extends State<Tabs> {
         ),
         body: const TabBarView(
           children: [
-              ListaCategorias(),
-              Favoritos(),
+            ListaCategorias(),
+            Favoritos(),
           ],
         ),
       ),
