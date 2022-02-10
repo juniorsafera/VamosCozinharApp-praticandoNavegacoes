@@ -9,49 +9,50 @@ class DetalheAlimento extends StatelessWidget {
     final alimento =
         ModalRoute.of(context)!.settings.arguments as ModeloAlimentos;
     return Scaffold(
-        appBar: AppBar(
-          title: Text(alimento.titulo),
-        ),
-        body: Column(
-          children: [
-            // ignore: sized_box_for_whitespace
-            Container(
-              height: 300,
-              width: double.infinity,
-              child: Image.network(
-                alimento.imagemUrl,
-                fit: BoxFit.cover,
-              ),
+      appBar: AppBar(
+        title: Text(alimento.titulo),
+      ),
+      body: Column(
+        children: [
+          // ignore: sized_box_for_whitespace
+          Container(
+            height: 300,
+            width: double.infinity,
+            child: Image.network(
+              alimento.imagemUrl,
+              fit: BoxFit.cover,
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 10),
-              child: const Text('Igredientes'),
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 10),
+            child: const Text('Igredientes'),
+          ),
+          Container(
+            width: 300,
+            height: 200,
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(color: Colors.grey),
+              borderRadius: BorderRadius.circular(10),
             ),
-            Container(
-              width: 300,
-              height: 200,
-              padding: const EdgeInsets.all(10),
-              margin: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Colors.grey),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: ListView.builder(
-                  itemCount: alimento.igredientes.length,
-                  itemBuilder: (context, index) {
-                    return Card(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 5,
-                            horizontal: 10,
-                          ),
-                          child: Text(alimento.igredientes[index]),
+            child: ListView.builder(
+                itemCount: alimento.igredientes.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 5,
+                          horizontal: 10,
                         ),
-                        color: Colors.orangeAccent);
-                  }),
-            )
-          ],
-        ));
+                        child: Text(alimento.igredientes[index]),
+                      ),
+                      color: Colors.orangeAccent);
+                }),
+          )
+        ],
+      ),
+    );
   }
 }
