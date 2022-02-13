@@ -6,6 +6,9 @@ class DetalheAlimento extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /* 
+    Definindo argumentos para receber dados de alimento
+    */
     final alimento =
         ModalRoute.of(context)!.settings.arguments as ModeloAlimentos;
     return Scaffold(
