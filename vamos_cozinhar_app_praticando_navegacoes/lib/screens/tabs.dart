@@ -25,23 +25,29 @@ class _TabsState extends State<Tabs> {
       ),
     ];
 
+    List<Widget> _tabViews = [
+      const ListaCategorias(),
+      const Favoritos(),
+    ];
+
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(
-          /*
+        /*
           Definindo o Titulo da appbar
           e chamando a lista de tabs criada acima
           na tabbar 
           */
+        appBar: AppBar(
           title: const Text('Vamos Cozinhar?'),
           bottom: TabBar(tabs: _tabs),
         ),
-        body: const TabBarView(
-          children: [
-            ListaCategorias(),
-            Favoritos(),
-          ],
+        /*
+        chamando a lista de tabViews no body
+        do scaffold
+         */
+        body: TabBarView(
+          children: _tabViews,
         ),
       ),
     );
